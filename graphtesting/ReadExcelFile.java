@@ -15,12 +15,13 @@ import paths.Graph;
 import paths.Search;
 import static paths.Search.counter;
 
-public class ReadExcelFile {
+public class ReadAndWriteExcelFile {
 
 	
 	public static void readXLSFile() throws IOException
 	{
-		InputStream ExcelFileToRead = new FileInputStream("C:/temp/triangleInput.xls");
+		
+		InputStream ExcelFileToRead = new FileInputStream("C:/temp/dateInput.xls");
 		HSSFWorkbook wb = new HSSFWorkbook(ExcelFileToRead);
 
 		HSSFSheet sheet=wb.getSheetAt(0);
@@ -81,5 +82,4 @@ public class ReadExcelFile {
 		readXLSFile();
 
 	}
-
 }
